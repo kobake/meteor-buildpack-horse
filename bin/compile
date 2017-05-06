@@ -42,6 +42,12 @@ fi
 
 # Get the path to dir one above this file.
 BUILDPACK_DIR=$(cd -P -- "$(dirname -- "$0")" && cd .. && pwd -P)
+TEST1_DIR=$0
+TEST2_DIR=$(cd)
+TEST3_DIR=$(dirname -- "$0")
+echo "-----> BDIR = $BUILDPACK_DIR"
+echo "-----> TDIR = $TEST1_DIR, $TEST2_DIR, $TEST3_DIR"
+
 # Get the directory our app is checked out in (the "BUILD_DIR"), passed by Heroku
 APP_CHECKOUT_DIR=$1
 CACHE_DIR=$2
